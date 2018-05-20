@@ -81,7 +81,7 @@ namespace Shape.GUI
             string filepath;
             string currentDirectory = Environment.CurrentDirectory;
             Note mNote = new Note();
-            mNote.TaoNote("TEST", txt_note.Text, tagofNote.Text);
+            mNote.TaoNote("TEST", txt_note.Text, lbTenTag.Text);
 
         }
 
@@ -224,6 +224,18 @@ namespace Shape.GUI
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void btnChonTag_Click(object sender, EventArgs e)
+        {
+            fTag f = new fTag(this);
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+        public void SetTenTag(string tenTag)
+        {
+            lbTenTag.Text = tenTag;
         }
     }
 }

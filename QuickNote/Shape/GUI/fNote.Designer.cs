@@ -1,4 +1,4 @@
-namespace Shape.GUI
+﻿namespace Shape.GUI
 {
     partial class fNote
     {
@@ -38,11 +38,12 @@ namespace Shape.GUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.tagofNote = new System.Windows.Forms.TextBox();
+            this.lbTenTag = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lbl_date = new System.Windows.Forms.Label();
             this.txt_note = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnChonTag = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -93,13 +94,13 @@ namespace Shape.GUI
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BackgroundImage = global::Shape.Properties.Resources.fantasy_game_background_by_seiorai_d8d7yts;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(294, 297);
+            this.panel2.Size = new System.Drawing.Size(294, 283);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
@@ -109,13 +110,14 @@ namespace Shape.GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btnChonTag);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lbl_date);
             this.panel1.Controls.Add(this.txt_note);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 55);
+            this.panel1.Location = new System.Drawing.Point(0, 41);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(294, 242);
             this.panel1.TabIndex = 3;
@@ -139,26 +141,26 @@ namespace Shape.GUI
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.tagofNote);
+            this.panel3.Controls.Add(this.lbTenTag);
             this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Location = new System.Drawing.Point(43, 179);
+            this.panel3.Location = new System.Drawing.Point(28, 179);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(189, 26);
+            this.panel3.Size = new System.Drawing.Size(172, 26);
             this.panel3.TabIndex = 8;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // tagofNote
+            // lbTenTag
             // 
-            this.tagofNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tagofNote.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tagofNote.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tagofNote.Location = new System.Drawing.Point(38, 0);
-            this.tagofNote.Margin = new System.Windows.Forms.Padding(2);
-            this.tagofNote.Name = "tagofNote";
-            this.tagofNote.Size = new System.Drawing.Size(151, 16);
-            this.tagofNote.TabIndex = 0;
-            this.tagofNote.TextChanged += new System.EventHandler(this.tagNote);
+            this.lbTenTag.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbTenTag.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbTenTag.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenTag.Location = new System.Drawing.Point(38, 0);
+            this.lbTenTag.Margin = new System.Windows.Forms.Padding(2);
+            this.lbTenTag.Name = "lbTenTag";
+            this.lbTenTag.Size = new System.Drawing.Size(134, 16);
+            this.lbTenTag.TabIndex = 0;
+            this.lbTenTag.TextChanged += new System.EventHandler(this.tagNote);
             // 
             // textBox2
             // 
@@ -217,6 +219,16 @@ namespace Shape.GUI
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnChonTag
+            // 
+            this.btnChonTag.Location = new System.Drawing.Point(205, 176);
+            this.btnChonTag.Name = "btnChonTag";
+            this.btnChonTag.Size = new System.Drawing.Size(63, 23);
+            this.btnChonTag.TabIndex = 10;
+            this.btnChonTag.Text = "Chọn Tag";
+            this.btnChonTag.UseVisualStyleBackColor = true;
+            this.btnChonTag.Click += new System.EventHandler(this.btnChonTag_Click);
+            // 
             // fNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,9 +269,10 @@ namespace Shape.GUI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox tagofNote;
+        private System.Windows.Forms.TextBox lbTenTag;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnChonTag;
     }
 }
 

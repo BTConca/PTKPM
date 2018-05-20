@@ -40,6 +40,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -70,17 +71,17 @@
     <Compile Include="GUI\fMenu.Designer.cs">
       <DependentUpon>fMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\fListNotes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\fListNotes.Designer.cs">
       <DependentUpon>fListNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fTag.Designer.cs">
+      <DependentUpon>fTag.cs</DependentUpon>
     </Compile>
     <Compile Include="MO\Note.cs" />
     <Compile Include="NoteDataSet.Designer.cs">
@@ -97,11 +98,11 @@
     <EmbeddedResource Include="GUI\fMenu.resx">
       <DependentUpon>fMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fListNotes.resx">
       <DependentUpon>fListNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fTag.resx">
+      <DependentUpon>fTag.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
