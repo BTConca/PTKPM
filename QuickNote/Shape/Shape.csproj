@@ -70,12 +70,6 @@
     <Compile Include="GUI\fMenu.Designer.cs">
       <DependentUpon>fMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\fListNotes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,9 +90,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fMenu.resx">
       <DependentUpon>fMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fListNotes.resx">
       <DependentUpon>fListNotes.cs</DependentUpon>

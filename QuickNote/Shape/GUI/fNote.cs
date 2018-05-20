@@ -105,15 +105,11 @@ namespace Shape.GUI
                 sr = new StreamReader(ofd.FileName);
                 text = sr.ReadToEnd();
                 txt_note.Text = text;
+               // tagofNote.Text = tag;
                 sr.Close();
             }
         }
 
-
-        private void RemoveLetter()
-        {
-
-        }
 
         /*
          * when you click here panel2 will visible so you are able to write your note.
