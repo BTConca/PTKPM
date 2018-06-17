@@ -21,6 +21,7 @@ namespace Shape.GUI
         }
 
         ImageList imgListSmall;
+
         private void LoadImageList()
         {
             imgListSmall = new ImageList()
@@ -43,6 +44,7 @@ namespace Shape.GUI
             return sum;
         }
 
+        string currentDirectory = Environment.CurrentDirectory;
         private void LoadTags(int a)
         {
             
@@ -50,7 +52,6 @@ namespace Shape.GUI
             string textnumNotes = null;
             LoadImageList();
             listTagNote.SmallImageList = imgListSmall;
-            string currentDirectory = Environment.CurrentDirectory;
             string path = String.Concat(currentDirectory, "\\Data\\");
             string[] tags;
             string[] notes;
@@ -61,22 +62,26 @@ namespace Shape.GUI
             {
                 ListViewItem mtag = new ListViewItem();
 
-               mtag.Text = Path.GetFileName(item);
+              
+               mtag.Tag = item;
                if (a == 1)
-               {              
+               {
+                   mtag.Text = Path.GetFileName(item);
                    string temp = String.Concat(item,"\\");
                    numNotes = Count(temp);
                    textnumNotes = Convert.ToString(numNotes);
-                   mtag.Text = string.Concat(mtag.Text, " Notes:", textnumNotes);
+                   mtag.Text = string.Concat(mtag.Text, " Số lượng:", textnumNotes);
                }
                else
                {
                    notepath = String.Concat(item, "\\");
                    notes = Directory.GetFiles(notepath);
+                   
                    foreach (string note in notes)
                    {
                        mtag.Text = Path.GetFileName(note);
                    }
+                   
                }
                 listTagNote.Items.Add(mtag);
                 mtag.ImageIndex++;
@@ -84,6 +89,10 @@ namespace Shape.GUI
             }
         }
 
+        private void open_Note()
+        {
+
+        }
         private void listTag(object sender, EventArgs e)
         {
 
@@ -99,19 +108,45 @@ namespace Shape.GUI
             LoadTags(1);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+
+        private void listTagNote_DoubleClick(object sender, EventArgs e)
         {
+            ListViewItem mtag = new ListViewItem();
+            string selectedFile = listTagNote.SelectedItems[0].Text;
+            string[] notes;
+            string tag = (string)listTagNote.SelectedItems[0].Tag;
+
+            string notepath = String.Concat(tag, "\\");
+            string path = Path.Combine(tag, selectedFile);
+            if (File.Exists(path))
+            {
+                try
+                {
+                    fNote opf = new fNote(2, path);
+                    opf.Show();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if(Directory.Exists(notepath))
+            {
+                listTagNote.Clear();
+                notes = Directory.GetFiles(notepath);
+
+                foreach (string note in notes)
+                {
+                    mtag.Text = Path.GetFileName(note);
+                    mtag.Tag = tag;
+                    listTagNote.Items.Add(mtag);
+                    mtag.ImageIndex++;
+                }
+            }
+            
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ListNotes_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

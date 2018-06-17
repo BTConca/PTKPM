@@ -210,6 +210,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Note.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\note3.jpg" />
+    <None Include="Resources\note2.jpg" />
+    <None Include="Resources\note1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

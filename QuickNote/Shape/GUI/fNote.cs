@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Shape.MO;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,12 +15,19 @@ namespace Shape.GUI
         int togMove;
         int MaxValX;
         int MaxValY;
-        string[] g_tag;
         int oder;
+        string _path;
         public fNote(int x)
         {
             InitializeComponent();
             oder = x;
+
+        }
+        public fNote(int x,string path)
+        {
+            InitializeComponent();
+            oder = x;
+            _path = path;
 
         }
 
@@ -59,6 +66,9 @@ namespace Shape.GUI
             if (oder == 1)
             {
                 readNote();
+            }else if(oder == 2)
+            {
+                readNote(_path);
             }
         }
 
@@ -75,13 +85,19 @@ namespace Shape.GUI
                     filename = string.Concat(filename,".", a);
             }
         }
+
+        string currentDirectory = Environment.CurrentDirectory;
         private void createFile(string name)
         {
             string path;
             string filepath;
-            string currentDirectory = Environment.CurrentDirectory;
+            string filename = null;
             Note mNote = new Note();
-            mNote.TaoNote("TEST", txt_note.Text, lbTenTag.Text);
+            if (txt_TieuDe.Text == "")
+                filename = "Không tiêu đề";
+            else
+                filename = txt_TieuDe.Text;
+            mNote.TaoNote(filename, txt_note.Text, lbTenTag.Text);
 
         }
 
@@ -92,8 +108,10 @@ namespace Shape.GUI
         }
 
         OpenFileDialog ofd = new OpenFileDialog();
-        private void readNote()
+        
+        public void readNote()
         {
+            ofd.InitialDirectory = Path.Combine(currentDirectory, "Data");
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 double size;
@@ -101,12 +119,31 @@ namespace Shape.GUI
                 string text;
                 FontStyle style;
                 ofd.Filter = "TXT | *.txt";
-                MessageBox.Show(ofd.FileName);
                 sr = new StreamReader(ofd.FileName);
                 text = sr.ReadToEnd();
                 txt_note.Text = text;
+                string lastFolderName = Path.GetFileName(Path.GetDirectoryName(ofd.FileName));
+                lbTenTag.Text = lastFolderName;
+                txt_TieuDe.Text = Path.GetFileName(ofd.FileName);
                 sr.Close();
             }
+        }
+         public void readNote(string path)
+        {
+            sr = new StreamReader(path);
+            string text = sr.ReadToEnd();
+            txt_note.Text = text;
+            string lastFolderName = Path.GetFileName(Path.GetDirectoryName(path));
+            lbTenTag.Text = lastFolderName;
+            txt_TieuDe.Text = Path.GetFileName(path);
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+            string name = "aa";
+            createFile(name);
+
+            this.Close();
         }
 
 
@@ -115,17 +152,11 @@ namespace Shape.GUI
 
         }
 
-        /*
-         * when you click here panel2 will visible so you are able to write your note.
-         */ 
         private void btn_add_Click(object sender, EventArgs e)
         {
             //panel2.Visible = true;
         }
 
-        /*
-         * After click on close button you are able to see your note.
-         */ 
         private void btn_close_Click(object sender, EventArgs e)
         {
             //panel2.Visible = false;
@@ -143,10 +174,6 @@ namespace Shape.GUI
 
         private void txt_note_TextChanged(object sender, EventArgs e)
         {
-            //sr.Close();
-            //sw = new StreamWriter(@"D:\Note\note.txt");
-            //sw.Write(txt_note.Text);
-            //sw.Close();
         }
 
         private void lbl_date_Click(object sender, EventArgs e)
@@ -159,15 +186,6 @@ namespace Shape.GUI
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
@@ -202,14 +220,6 @@ namespace Shape.GUI
             
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-            string name = "aa";
-            createFile(name);
-
-            Application.Exit();
-        }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -236,6 +246,72 @@ namespace Shape.GUI
         public void SetTenTag(string tenTag)
         {
             lbTenTag.Text = tenTag;
+        }
+
+        private void chọnMẫuNoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bg_Note.Visible = false ;
+            UnHideBG();
+        }
+
+
+
+        private void bg_note1_Click(object sender, EventArgs e)
+        {
+            Image myimage = new Bitmap(@"Resources/note1.jpg");
+
+            if (myimage ==null)
+            {
+                MessageBox.Show("Không có Resources");
+            } 
+            else
+            {
+                note_model.Image = myimage;
+                HideBG();
+            }
+        }
+
+        private void bg_note3_Click(object sender, EventArgs e)
+        {
+            Image myimage = new Bitmap(@"Resources/note3.jpg");
+            if (myimage == null)
+            {
+                MessageBox.Show("Không có Resources");
+            }
+            else
+            {
+                note_model.Image = myimage;
+                HideBG();
+            }
+        }
+
+        private void bg_note2_Click(object sender, EventArgs e)
+        {
+            Image myimage = new Bitmap(@"Resources/note2.jpg");
+            if (myimage == null)
+            {
+                MessageBox.Show("Không có Resources");
+            }
+            else
+            {
+                note_model.Image = myimage;
+                HideBG();
+            }
+        }
+
+        private void HideBG()
+        {
+            bg_note1.Hide();
+            bg_note2.Hide();
+            bg_note3.Hide();
+            bg_Note.Visible = true;
+        }
+        private void UnHideBG()
+        {
+            bg_note1.Visible = true;
+            bg_note2.Visible = true;
+            bg_note3.Visible = true;
+            
         }
     }
 }
