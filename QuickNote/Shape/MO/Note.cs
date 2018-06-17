@@ -51,10 +51,14 @@ namespace Shape.MO
             string item = String.Join( ",", _loaiTag);
             path = String.Concat(currentDirectory, "\\", "Data", "\\", item);
             filepath = String.Concat(path,"\\", _tieuDe,".txt");
+            
             _thoiGianTao = System.DateTime.Now.ToLocalTime();
 
             bool existFile = File.Exists(filepath);
             bool existDir = File.Exists(path);
+            if (String.Compare(_tieuDe, "Không tiêu đề") == 0)
+                existFile = false;
+
             if (!(existDir))
             {
                 Directory.CreateDirectory(path);

@@ -21,6 +21,8 @@ namespace Shape.GUI
         {
             InitializeComponent();
             oder = x;
+            bg_Note.Visible = false;
+            UnHideBG();
 
         }
         public fNote(int x,string path)
@@ -140,7 +142,7 @@ namespace Shape.GUI
         private void label1_Click(object sender, EventArgs e)
         {
 
-            string name = "aa";
+            string name = txt_TieuDe.Text;
             createFile(name);
 
             this.Close();
@@ -313,5 +315,7 @@ namespace Shape.GUI
             bg_note3.Visible = true;
             
         }
+
+
     }
 }

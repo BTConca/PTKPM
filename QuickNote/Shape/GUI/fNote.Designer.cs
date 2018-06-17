@@ -38,8 +38,8 @@
             this.bg_Note = new System.Windows.Forms.Panel();
             this.txt_TieuDe = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnChonTag = new System.Windows.Forms.Button();
             this.bg_note2 = new System.Windows.Forms.PictureBox();
+            this.btnChonTag = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbTenTag = new System.Windows.Forms.TextBox();
@@ -71,27 +71,28 @@
             this.chọnMẫuNoteToolStripMenuItem,
             this.fontToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(197, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(171, 52);
             // 
             // chọnMẫuNoteToolStripMenuItem
             // 
             this.chọnMẫuNoteToolStripMenuItem.Name = "chọnMẫuNoteToolStripMenuItem";
-            this.chọnMẫuNoteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.chọnMẫuNoteToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.chọnMẫuNoteToolStripMenuItem.Text = "Chọn mẫu note";
             this.chọnMẫuNoteToolStripMenuItem.Click += new System.EventHandler(this.chọnMẫuNoteToolStripMenuItem_Click);
             // 
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.fontToolStripMenuItem.Text = "Font";
             // 
             // bg_note3
             // 
             this.bg_note3.Image = global::Shape.Properties.Resources.note3;
-            this.bg_note3.Location = new System.Drawing.Point(849, 52);
+            this.bg_note3.Location = new System.Drawing.Point(637, 42);
+            this.bg_note3.Margin = new System.Windows.Forms.Padding(2);
             this.bg_note3.Name = "bg_note3";
-            this.bg_note3.Size = new System.Drawing.Size(382, 296);
+            this.bg_note3.Size = new System.Drawing.Size(286, 240);
             this.bg_note3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bg_note3.TabIndex = 6;
             this.bg_note3.TabStop = false;
@@ -101,9 +102,10 @@
             // bg_note1
             // 
             this.bg_note1.Image = global::Shape.Properties.Resources.note1;
-            this.bg_note1.Location = new System.Drawing.Point(426, 52);
+            this.bg_note1.Location = new System.Drawing.Point(320, 42);
+            this.bg_note1.Margin = new System.Windows.Forms.Padding(2);
             this.bg_note1.Name = "bg_note1";
-            this.bg_note1.Size = new System.Drawing.Size(382, 296);
+            this.bg_note1.Size = new System.Drawing.Size(286, 240);
             this.bg_note1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bg_note1.TabIndex = 5;
             this.bg_note1.TabStop = false;
@@ -118,11 +120,12 @@
             this.bg_Note.ContextMenuStrip = this.contextMenuStrip1;
             this.bg_Note.Controls.Add(this.txt_TieuDe);
             this.bg_Note.Controls.Add(this.panel1);
+            this.bg_Note.Controls.Add(this.label1);
             this.bg_Note.Controls.Add(this.lbTieuDe);
             this.bg_Note.Location = new System.Drawing.Point(0, 0);
-            this.bg_Note.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bg_Note.Margin = new System.Windows.Forms.Padding(2);
             this.bg_Note.Name = "bg_Note";
-            this.bg_Note.Size = new System.Drawing.Size(382, 348);
+            this.bg_Note.Size = new System.Drawing.Size(286, 283);
             this.bg_Note.TabIndex = 4;
             this.bg_Note.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.bg_Note.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
@@ -132,10 +135,9 @@
             // 
             this.txt_TieuDe.BackColor = System.Drawing.SystemColors.Window;
             this.txt_TieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TieuDe.Location = new System.Drawing.Point(111, 10);
-            this.txt_TieuDe.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TieuDe.Location = new System.Drawing.Point(83, 8);
             this.txt_TieuDe.Name = "txt_TieuDe";
-            this.txt_TieuDe.Size = new System.Drawing.Size(197, 30);
+            this.txt_TieuDe.Size = new System.Drawing.Size(149, 26);
             this.txt_TieuDe.TabIndex = 4;
             // 
             // panel1
@@ -143,39 +145,37 @@
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.bg_note2);
             this.panel1.Controls.Add(this.btnChonTag);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lbl_date);
             this.panel1.Controls.Add(this.txt_note);
             this.panel1.Controls.Add(this.note_model);
-            this.panel1.Location = new System.Drawing.Point(0, 50);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(0, 41);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(380, 298);
+            this.panel1.Size = new System.Drawing.Size(285, 242);
             this.panel1.TabIndex = 3;
-            // 
-            // btnChonTag
-            // 
-            this.btnChonTag.Location = new System.Drawing.Point(273, 217);
-            this.btnChonTag.Margin = new System.Windows.Forms.Padding(4);
-            this.btnChonTag.Name = "btnChonTag";
-            this.btnChonTag.Size = new System.Drawing.Size(84, 28);
-            this.btnChonTag.TabIndex = 10;
-            this.btnChonTag.Text = "Chọn Tag";
-            this.btnChonTag.UseVisualStyleBackColor = true;
-            this.btnChonTag.Click += new System.EventHandler(this.btnChonTag_Click);
             // 
             // bg_note2
             // 
             this.bg_note2.Image = global::Shape.Properties.Resources.note2;
-            this.bg_note2.Location = new System.Drawing.Point(3, 0);
+            this.bg_note2.Location = new System.Drawing.Point(0, 1);
+            this.bg_note2.Margin = new System.Windows.Forms.Padding(2);
             this.bg_note2.Name = "bg_note2";
-            this.bg_note2.Size = new System.Drawing.Size(381, 301);
+            this.bg_note2.Size = new System.Drawing.Size(286, 245);
             this.bg_note2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bg_note2.TabIndex = 7;
             this.bg_note2.TabStop = false;
             this.bg_note2.Visible = false;
             this.bg_note2.Click += new System.EventHandler(this.bg_note2_Click);
+            // 
+            // btnChonTag
+            // 
+            this.btnChonTag.Location = new System.Drawing.Point(205, 176);
+            this.btnChonTag.Name = "btnChonTag";
+            this.btnChonTag.Size = new System.Drawing.Size(63, 23);
+            this.btnChonTag.TabIndex = 10;
+            this.btnChonTag.Text = "Chọn Tag";
+            this.btnChonTag.UseVisualStyleBackColor = true;
+            this.btnChonTag.Click += new System.EventHandler(this.btnChonTag_Click);
             // 
             // label1
             // 
@@ -184,9 +184,10 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Purple;
-            this.label1.Location = new System.Drawing.Point(301, 2);
+            this.label1.Location = new System.Drawing.Point(259, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 39);
+            this.label1.Size = new System.Drawing.Size(27, 32);
             this.label1.TabIndex = 9;
             this.label1.Text = "x";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -196,10 +197,10 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.lbTenTag);
             this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Location = new System.Drawing.Point(37, 220);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(28, 179);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(229, 32);
+            this.panel3.Size = new System.Drawing.Size(172, 26);
             this.panel3.TabIndex = 8;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -208,10 +209,10 @@
             this.lbTenTag.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbTenTag.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbTenTag.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenTag.Location = new System.Drawing.Point(50, 0);
-            this.lbTenTag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbTenTag.Location = new System.Drawing.Point(38, 0);
+            this.lbTenTag.Margin = new System.Windows.Forms.Padding(2);
             this.lbTenTag.Name = "lbTenTag";
-            this.lbTenTag.Size = new System.Drawing.Size(179, 20);
+            this.lbTenTag.Size = new System.Drawing.Size(134, 16);
             this.lbTenTag.TabIndex = 0;
             this.lbTenTag.TextChanged += new System.EventHandler(this.tagNote);
             // 
@@ -223,10 +224,10 @@
             this.textBox2.Font = new System.Drawing.Font("Lucida Handwriting", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Purple;
             this.textBox2.Location = new System.Drawing.Point(0, 0);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(52, 23);
+            this.textBox2.Size = new System.Drawing.Size(39, 19);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "Tag:";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
@@ -237,10 +238,9 @@
             this.lbl_date.BackColor = System.Drawing.Color.White;
             this.lbl_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbl_date.Location = new System.Drawing.Point(193, 255);
-            this.lbl_date.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_date.Location = new System.Drawing.Point(145, 207);
             this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(38, 17);
+            this.lbl_date.Size = new System.Drawing.Size(30, 13);
             this.lbl_date.TabIndex = 5;
             this.lbl_date.Text = "Date";
             this.lbl_date.Click += new System.EventHandler(this.lbl_date_Click);
@@ -253,10 +253,9 @@
             this.txt_note.ContextMenuStrip = this.contextMenuStrip1;
             this.txt_note.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_note.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_note.Location = new System.Drawing.Point(57, 62);
-            this.txt_note.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_note.Location = new System.Drawing.Point(43, 50);
             this.txt_note.Name = "txt_note";
-            this.txt_note.Size = new System.Drawing.Size(252, 153);
+            this.txt_note.Size = new System.Drawing.Size(189, 124);
             this.txt_note.TabIndex = 0;
             this.txt_note.Text = "";
             this.txt_note.TextChanged += new System.EventHandler(this.txt_note_TextChanged);
@@ -266,10 +265,9 @@
             this.note_model.ContextMenuStrip = this.contextMenuStrip1;
             this.note_model.Image = global::Shape.Properties.Resources.Sticky_Note_Background;
             this.note_model.InitialImage = null;
-            this.note_model.Location = new System.Drawing.Point(4, 0);
-            this.note_model.Margin = new System.Windows.Forms.Padding(4);
+            this.note_model.Location = new System.Drawing.Point(3, 0);
             this.note_model.Name = "note_model";
-            this.note_model.Size = new System.Drawing.Size(375, 290);
+            this.note_model.Size = new System.Drawing.Size(281, 236);
             this.note_model.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.note_model.TabIndex = 1;
             this.note_model.TabStop = false;
@@ -280,24 +278,22 @@
             this.lbTieuDe.AutoSize = true;
             this.lbTieuDe.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.lbTieuDe.Font = new System.Drawing.Font("Ravie", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTieuDe.Location = new System.Drawing.Point(4, 18);
-            this.lbTieuDe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTieuDe.Location = new System.Drawing.Point(3, 15);
             this.lbTieuDe.Name = "lbTieuDe";
-            this.lbTieuDe.Size = new System.Drawing.Size(89, 22);
+            this.lbTieuDe.Size = new System.Drawing.Size(75, 19);
             this.lbTieuDe.TabIndex = 5;
             this.lbTieuDe.Text = "Tiêu Dề";
             // 
             // fNote
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1256, 381);
+            this.ClientSize = new System.Drawing.Size(942, 310);
             this.Controls.Add(this.bg_note3);
             this.Controls.Add(this.bg_note1);
             this.Controls.Add(this.bg_Note);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "fNote";

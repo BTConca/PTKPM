@@ -201,7 +201,9 @@
   <ItemGroup>
     <None Include="Resources\TagGamesLogo_JustTag_WhiteOutline.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BUS\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Note.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
